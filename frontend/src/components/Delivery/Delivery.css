@@ -1,0 +1,106 @@
+/* Основные стили для контейнера страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .delivery-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Заголовок */
+  .delivery-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Список доставок */
+  .delivery-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .delivery-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .delivery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Текстовые стили */
+  .delivery-order {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .delivery-status {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .delivery-delivered {
+    font-size: 14px;
+    font-style: italic;
+    color: #888;
+  }
+  
+  .delivery-address {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Цветовое оформление статусов */
+  .delivery-status.Delivered {
+    color: #4caf50; /* Зеленый */
+  }
+  
+  .delivery-status.pending {
+    color: #ffa000; /* Оранжевый */
+  }
+  
+  .delivery-status.failed {
+    color: #f44336; /* Красный */
+  }
+  
+  /* Кнопки */
+  button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

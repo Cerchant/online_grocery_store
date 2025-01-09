@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:80" # Фронтенд будет доступен на порту 3000
+    networks:
+      - my-network
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    expose:
+      - "8000"
+    networks:
+      - my-network
+
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80" # Nginx будет доступен на порту 80
+    depends_on:
+      - backend
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
